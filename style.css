@@ -1,97 +1,104 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@200&display=swap');
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  margin: 0; 
+  background: url(./images/background.jpg);
+  height: 100%;
+  font-family: 'Urbanist', sans-serif;
+  font-weight: lighter;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+  .container {
+    overflow: hidden;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 20vh 0;
+  }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+  form, .card {
+    background-color: rgba(29, 8, 49, 0.788);
+    display: flex;
+    color: whitesmoke;
+    font-size: 0.8rem;
+    width: 60%;
+    height: 100%;
+  }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
-}
+  .card {
+    background-color:  rgba(144, 86, 199, 0.459);
+    padding: 2rem;
 
-.card {
-  padding: 2em;
-}
+  }
 
-.read-the-docs {
-  color: #888;
-}
+  fieldset, .card {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 0.2rem solid rgb(123, 62, 184);
+    box-shadow:  0 0 0.5rem #d330bc, 0 0 1rem #d82dec;
+  }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  li {
+    list-style: none;
+    padding: 5%;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+  }
+
+  fieldset h2, input, button, h1 {
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.2em;
+  }
+
+  .searchInput {
+    border-style: none;
+    padding: 0.8rem;
+    width: 50%;
+    font-size: 1rem;
+    margin-bottom: 2%;
+  }
+
+.btn {
+  background-color: rgb(184, 70, 219);
+  padding: 0.6rem;
+  font-family: 'Urbanist', sans-serif;
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+  border-style: none;
+  box-shadow: 0.2rem;
+  transition-duration: 0.4s;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+button:hover {
+  background-color: rgb(216, 159, 233);
 }
+
+  footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(29, 8, 49, 0.548);
+    color: rgba(245, 245, 245, 0.616);
+    text-align: center;
+    font-size: 1rem;
+    border-top: 1px solid whitesmoke;
+  }
+
+  .flag {
+    width: 4rem;
+  }
+
+  .cards {
+    display: none;
+  }
