@@ -8,18 +8,22 @@ export const showCountry = (document) => {
 };
 
 const getDataCountry = (document) => {
-  document.getElementById("searcher").innerHTML = `  
-  <h2>Nombre de país </h2>
+  let dataSelected = document.getElementById("selectedCountry");
+  let obj = JSON.parse(dataSelected.value);
+  document.getElementById("searcher").innerHTML = `
+  <div class="fieldset">
+  <h2>${obj.name}</h2>
+  <img alt="country flag" src="${obj.flag}"/>
   <ul>
-    <li>Capital: hola</li>
-    <li>Region: hola</li>
-    <li>Language:hola</li>
+    <li>Capital: ${obj.capital}</li>
+    <li>Region: ${obj.region}</li>
   </ul>
-  <button type="button" class="btn" id="goBack">BACK</button>
+  <button type="button" id="goBack">BACK</button>
+  </div>
   `;
 
   let goBackButton = document.getElementById("goBack");
-  goBackButton.addEventListener("click", backHome); 
+  goBackButton.addEventListener("click", backHome);
   function backHome() {
     window.location.reload();
   }

@@ -3,21 +3,20 @@ import { showCountry } from "./clicker.js";
 
 document.querySelector("#app").innerHTML = `
     <div class="container">
-    <div class="fieldset" id="searcher">
+    <div class="fieldset fieldset-box" id="searcher">
       <h2>Are you looking for some country?</h2>
-      <select id="selectedCountry" class="searchInput">
+      <select id="selectedCountry">
         <option value="options">Select a country...</option>
       </select>
       <button
         type="button"
-        class="btn"
         id="selected"
       >
         SEARCH
       </button>
     </div>
     <div id="result"> </div>
-    <footer class="footer">
+    <footer>
       © Barbara Sagredo C <br />
       2021
     </footer>
@@ -38,10 +37,8 @@ fetch("https://restcountries.com/v2/all")
         name: response.name,
         region: response.region,
         capital: response.capital,
-        languaje: response.languaje,
         flag: response.flag,
       });
       selectedCountry.appendChild(newOption);
     });
   });
-
